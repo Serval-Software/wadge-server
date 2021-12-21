@@ -24,11 +24,15 @@ public class Food {
     private FoodType type;
     private List<Month> availability;
     private int expiration;
+    private double quantity;
+    private Unit unit;
 
-    public Food(String name, FoodType type, List<Month> availability, int expiration) {
+    public Food(String name, FoodType type, List<Month> availability, int expiration, int quantity, Unit unit) {
         this.name = name;
         this.type = type;
         this.availability = availability;
         this.expiration = expiration;
+        this.quantity = quantity;
+        this.unit = unit;
     }
 }

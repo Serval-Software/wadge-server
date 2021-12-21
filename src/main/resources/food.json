@@ -1,0 +1,50 @@
+[
+	{
+		"name" : "abricot",
+		"type" : "fruit",
+		"availability" : ["juin", "juillet", "aout"],
+		"expiration" : 7,
+		"quantity" : 55,
+		"unit" : "G"
+	},
+	{
+		"name" : "ail",
+		"type" : "legume",
+		"availability" : ["aout", "septembre", "octobre", "novembre", "decembre"],
+		"expiration" : 182,
+		"quantity" : 7,
+		"unit" : "G"
+	},
+	{
+		"name" : "amande",
+		"type" : "fruit",
+		"availability" : ["septembre", "octobre"],
+		"expiration" : 150,
+		"quantity" : 100,
+		"unit" : "G"
+	},
+	{
+		"name" : "ananas",
+		"type" : "fruit",
+		"availability" : ["janvier", "fevrier", "mars", "avril", "octobre", "novembre", "decembre"],
+		"expiration" : 5,
+		"quantity" : 2000,
+		"unit" : "G"
+	},
+	{
+		"name" : "artichaut",
+		"type" : "legume",
+		"availability" : ["juin", "juillet", "aout", "septembre"],
+		"expiration" : 5,
+		"quantity" : 300,
+		"unit" : "G"
+	},
+	{
+		"name" : "asperge",
+		"type" : "legume",
+		"availability" : ["avril", "mai", "juin"],
+		"expiration" : 3,
+		"quantity" : 50,
+		"unit" : "G"
+	}
+]

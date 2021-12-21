@@ -1,8 +1,7 @@
 package com.wadge.server.food;
 
-import java.time.Month;
-import java.util.List;
-
+import com.wadge.server.utils.common.MonthMapper;
+import com.wadge.server.utils.db.JsonReader;
 import com.wadge.server.utils.db.SequenceGenerator;
 
 import org.springframework.boot.CommandLineRunner;
@@ -16,11 +15,20 @@ import lombok.AllArgsConstructor;
 public class FoodConfig {
     private SequenceGenerator sequenceGenerator;
     @Bean
-    CommandLineRunner commandLineRunner(FoodRepository foodRepository) {
-        return args -> foodRepository.save(new Food(sequenceGenerator.generateSequence("food_sequence"), 
-			"Apple", 
-			FoodType.FRUIT, 
-			List.of(Month.JUNE), 
-			2));
+    CommandLineRunner commandLineRunner(final FoodRepository foodRepository) {
+        final MonthMapper mapper = new MonthMapper();
+
+        return args -> {
+            if(foodRepository.findAll().isEmpty()) {
+                foodRepository.saveAll( 
+                    new JsonReader().readFile("src/main/resources/food.json", LoadedFood.class)
+                    .stream()
+                    .map(food -> food.toFood(
+                        sequenceGenerator.generateSequence("food_sequence"), 
+                        mapper))
+                    .toList()
+                    );
+            }
+        };
     }
 }

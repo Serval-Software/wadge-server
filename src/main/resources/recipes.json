@@ -1,0 +1,27 @@
+[
+	{
+	"name" : "Tarte au chocolat blanc et aux Framboises",
+	"servings" : 6,
+	"preparationTime" : 15,
+	"cookingTime" : 12,
+	"restTime" : 0,
+	"ingredients" : [
+		{
+			"quantity":1,
+			"unit":"NULL",
+			"name":"pate sablée"
+		},
+		{
+			"quantity": 15,
+			"unit": "CL",
+			"name": "lait concentré non sucré"
+		}
+	],
+	"steps" : ["Préchauffer le four à 180°C","Etaler la pâte dans le plat à tarte et piquer le fond avec une fourchette","Faire cuire la pâte 6 minutes à blanc",
+		"Faire bouillir dans une casserole le lait concentré non sucré avec le chocolat blanc et 3 cuil. à soupe d'eau","Battre les jaunes d'oeuf avec le lait concentré sucré dans un saladier, puis les ajouter au mélange de chocolat",
+		"Verser sur la pâte","Disposer les framboises sur le dessus","Enfourner pour 6 minutes", "A servir frais"],
+	"difficulty" : "Moyen",
+	"tools" : ["plat à tarte","Saladier", "Casserole", "Four"],
+	"tags" : ["Dessert", "Froid"]
+	}
+]
